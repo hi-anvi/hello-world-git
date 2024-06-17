@@ -1,0 +1,34 @@
+var answer = 0;
+draw = function() {
+    fill(0, 0, 0);
+    ellipse(200, 200, 375, 375);
+    fill(60, 0, 255);
+    triangle(200, 104, 280, 280, 120, 280);
+    fill(255, 255, 255);
+    if (mouseIsPressed) {
+        answer = floor(random(1, 5));
+    }
+    if (answer > 4) {
+        textSize(20);
+        text("It is", 185, 200);
+        text("CERTAIN", 159, 244); 
+    } else if (answer > 3) {
+        textSize(15);
+        text("My source", 166, 200);
+        text("says NO", 171, 244);  
+    } else if (answer > 2) {
+        textSize(20);
+        text("I have", 174, 200);
+        text("NO IDEA!!", 155, 244);  
+    } else if (answer > 1) {
+        textSize(17);
+        text("Not now!", 165, 200);
+        text("Wait until", 165, 225);
+        text("NEXT DECADE", 141, 254);  
+    } else if (answer > 0) {
+        textSize(20);
+        text("Solve it", 167, 200);
+        text("YOURSELF", 148, 244);  
+    }
+   
+};
